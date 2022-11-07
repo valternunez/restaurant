@@ -1,0 +1,25 @@
+<div id="order-list">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Order</th>
+                <th>Client's Name</th>
+                <th>Phone</th>
+                <th>Address</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for order in orders %}
+            <tr>
+                <td>{{ order.id }}</td>
+                <td>{{ order.client_order }}</td>
+                <td>{{ order.client_name }}</td>
+                <td>{{ order.client_phone }}</td>
+                <td>{{ order.client_address }}</td>
+                <td><a href="{% url 'client_order_detail' id=order.id %}" class="btn btn-primary">View Order</a></td>
+            </tr>
+            {% endfor %}    
+        </tbody>
+    </table>
+</div>

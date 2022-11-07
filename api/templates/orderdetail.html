@@ -1,0 +1,46 @@
+<div id="order-detail">
+    <div class="row">
+        <h3 class="col-sm text-left p-0">Order # {{ order.id }}</h3>
+        <h3 class="col-sm text-right p-0">{{ order.client_name }}</h3>
+    </div>
+    <div class="row">
+        <p class="col-sm text-right p-0"><b>Phone:</b> {{ order.client_phone }}</p>
+        <p class="col-sm text-right p-0"><b>Address:</b> {{ order.client_address }}</p>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Amount</th>
+                <th>Item</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th></th>
+            </tr>
+        </tbody>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Order</th>
+                <th>Client's Name</th>
+                <th>Phone</th>
+                <th>Address</th>
+                <th>Created</th>
+                <th>Updated</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ order.id }}</td>
+                <td>{{ order.client_order }}</td>
+                <td>{{ order.client_name }}</td>
+                <td>{{ order.client_phone }}</td>
+                <td>{{ order.client_address }}</td>
+                <td>{{ order.created_at }}</td>
+                <td>{{ order.updated_at }}</td>
+            </tr>  
+        </tbody>
+    </table>
+</div>
