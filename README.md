@@ -59,7 +59,7 @@ On the *Body*, select *Raw* data of type *JSON* and send a valid JSON. Here is a
 Send a GET request to http://localhost:8000/api/
 
 ### GET  - Obtain a specific order
-Send a GET request to http://localhost:8000/api/1   (change the number to the id of the order you want to update)
+Send a GET request to http://localhost:8000/api/1   (change the number to the id of the order you want to obtain)
 
 ### PUT - Update an existing order
 Send a PUT request to http://localhost:8000/api/1   (change the number to the id of the order you want to update)
