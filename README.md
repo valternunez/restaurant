@@ -22,23 +22,23 @@ In this project, the restaurant can visualize the incoming data in real-time thr
 ### Installation
  1. Download the project from the GitHub repository inside your preferred location in your local computer.
 
-    git clone https://github.com/valternunez/restaurant.git
+	    git clone https://github.com/valternunez/restaurant.git
 
  2. Enter the folder just created.
 
-    cd restaurant
+	    cd restaurant
 
  3. Create the containers on Docker.
 
-    docker-compose up -d --build
+	    docker-compose up -d --build
 
  4. When the containers are done, you will need to run migrations. 
 
-    docker-compose exec web python manage.py migrate
+	    docker-compose exec web python manage.py migrate
 
  5. *(Optional)* If you want to create an admin/super user, you can run the next command.
 
-    docker-compose exec web python manage.py createsuperuser
+	    docker-compose exec web python manage.py createsuperuser
 
 Now the project is running! Go to http://localhost:8000/api/orders to see the list of orders. (Which will be empty at the moment)
 
