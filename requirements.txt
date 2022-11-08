@@ -5,3 +5,4 @@ djangorestframework
 requests
 django-phonenumber-field[phonenumberslite]
 django-htmx==1.6.0
+python-decouple
