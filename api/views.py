@@ -13,7 +13,8 @@ def order_list(request):
     if request.method == 'GET':
         orders = Order.objects.all().order_by("created_at")
         serializer = OrderSerializer(orders, many=True)
-        return Response(serializer.data)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+       
     
     elif request.method == 'POST':
         serializer = OrderSerializer(data=request.data)
@@ -31,13 +32,13 @@ def order_detail(request, id):
 
     if request.method == 'GET':
         serializer = OrderSerializer(order)
-        return Response(serializer.data)
+        return Response(serializer.data, status=status.HTTP_200_OK)
 
     elif request.method == 'PUT':
         serializer = OrderSerializer(order, data=request.data)
         if serializer.is_valid():
             serializer.save()
-            return Response(serializer.data)
+            return Response(serializer.data, status=status.HTTP_200_OK)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
     elif request.method == 'DELETE':
